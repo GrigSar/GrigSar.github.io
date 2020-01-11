@@ -23,7 +23,7 @@ class Chat {
 
     weather() {
         var that = this;
-        $.getJSON('https://ipapi.co/json/', function (result) {
+        $.getJSON('https://ipfind.co/me?auth=d1685842-31b4-4399-8650-ee656dad01c2', function (result) {
             fetch('https://api.weatherbit.io/v2.0/forecast/daily?lat=' + result.latitude + '&lon=' + result.longitude + '&key=480dab18bdf94b1187e90c4442bee27a&lang=ru&days=2').then(function (resp) {
                 return resp.json()
             }).then(function (data) {
